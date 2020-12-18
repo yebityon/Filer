@@ -13,7 +13,7 @@
 
 #include "file_handler.hpp"
 
-const std::vector<std::string>valid_extension_type = {".txt",".md",".dat",".csv",".cpp"};
+const std::vector<std::string>valid_extension_type = {".txt",".md",".dat",".csv",".cpp",".html",".yml"};
 int main(int argc, const char * argv[]) {
     if(argc != 2){
         std::cout << "USAGE : [path where you travel]" << std::endl;

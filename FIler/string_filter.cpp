@@ -13,8 +13,8 @@
 #include <cctype>
 #include <iostream>
 
-const std::string remove_string = "yebityon";
-const std::string replace_string = "remutyan!";
+const std::string remove_string = "peertube";
+const std::string replace_string = "Aleftube";
 std::string filter(std::string s){
     std::string  ls = s;
     std::transform(ls.begin(), ls.end(), ls.begin(),[](unsigned char c){
