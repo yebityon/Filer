@@ -10,6 +10,8 @@
 
 #include <stdio.h>
 #include <string>
+#include "global.cpp"
+
 int read_file(const std::string fileName);
 int write_file(const std::string fileName,const std::vector<std::string>&buffers);
 #endif /* replace_strings_hpp */
