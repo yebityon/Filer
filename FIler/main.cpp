@@ -8,13 +8,12 @@
 #include "constant.hpp"
 #include "file_handler.hpp"
 
-static const std::vector<std::string>valid_extension_type = {".txt",".md",".dat",".csv",".cpp",".html",".yml"};
 std::vector<std::string>urls;
-
+const std::vector<std::string>valid_extension_type = {".txt",".md",".dat",".csv",".cpp",".html",".yml",".json",".html","xml","mht","xhtml","asc",".css",".xsl",".js",".pl",".bat"};
 
 int main(int argc, const char * argv[]) {
     if(argc != 3){
-        std::cout << "USAGE : [path where you travel]" << std::endl;
+        std::cout << "USAGE : [path/to/target_dir] [path/to/create_ouput.csv]" << std::endl;
         exit(0);
     }
     namespace fs = std::filesystem;
