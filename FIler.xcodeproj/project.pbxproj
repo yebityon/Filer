@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		29E9FCE4258B6C6A00C99492 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 29E9FCE3258B6C6A00C99492 /* main.cpp */; };
+		29E9FCED258B6C9600C99492 /* file_handler.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 29E9FCEB258B6C9600C99492 /* file_handler.cpp */; };
+		29E9FCF3258B6F9B00C99492 /* string_filter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 29E9FCF1258B6F9B00C99492 /* string_filter.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,6 +27,10 @@
 /* Begin PBXFileReference section */
 		29E9FCE0258B6C6A00C99492 /* FIler */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = FIler; sourceTree = BUILT_PRODUCTS_DIR; };
 		29E9FCE3258B6C6A00C99492 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		29E9FCEB258B6C9600C99492 /* file_handler.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = file_handler.cpp; sourceTree = "<group>"; };
+		29E9FCEC258B6C9600C99492 /* file_handler.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = file_handler.hpp; sourceTree = "<group>"; };
+		29E9FCF1258B6F9B00C99492 /* string_filter.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = string_filter.cpp; sourceTree = "<group>"; };
+		29E9FCF2258B6F9B00C99492 /* string_filter.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = string_filter.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +64,10 @@
 			isa = PBXGroup;
 			children = (
 				29E9FCE3258B6C6A00C99492 /* main.cpp */,
+				29E9FCEB258B6C9600C99492 /* file_handler.cpp */,
+				29E9FCF1258B6F9B00C99492 /* string_filter.cpp */,
+				29E9FCF2258B6F9B00C99492 /* string_filter.hpp */,
+				29E9FCEC258B6C9600C99492 /* file_handler.hpp */,
 			);
 			path = FIler;
 			sourceTree = "<group>";
@@ -119,6 +129,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				29E9FCE4258B6C6A00C99492 /* main.cpp in Sources */,
+				29E9FCED258B6C9600C99492 /* file_handler.cpp in Sources */,
+				29E9FCF3258B6F9B00C99492 /* string_filter.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -131,8 +143,8 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
-				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_CXX_LANGUAGE_STANDARD = "c++17";
+				CLANG_CXX_LIBRARY = "compiler-default";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_ENABLE_OBJC_WEAK = YES;
@@ -190,8 +202,8 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
-				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_CXX_LANGUAGE_STANDARD = "c++17";
+				CLANG_CXX_LIBRARY = "compiler-default";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_ENABLE_OBJC_WEAK = YES;
