@@ -8,7 +8,15 @@
 #ifndef strinf_filter_hpp
 #define strinf_filter_hpp
 
-#include <string>
-std::string filter(std::string s);
 
+#include <string>
+#include <regex>
+#include <algorithm>
+#include <cctype>
+#include <iostream>
+
+#include "global.cpp"
+
+std::string filter(std::string s);
+void extracts_url(std::string s);
 #endif /* strinf_filter_hpp */

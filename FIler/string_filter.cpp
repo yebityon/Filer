@@ -7,15 +7,8 @@
 
 #include "string_filter.hpp"
 
-#include <string>
-#include <regex>
-#include <algorithm>
-#include <cctype>
-#include <iostream>
-
-const std::string remove_string = "yebityon";
-const std::string replace_string = "remutyan!";
 std::string filter(std::string s){
+    extracts_url(s);
     std::string  ls = s;
     std::transform(ls.begin(), ls.end(), ls.begin(),[](unsigned char c){
         return std::tolower(c);
@@ -26,4 +19,8 @@ std::string filter(std::string s){
         s.replace(id, remove_string.size(), replace_string);
     }
     return s;
+}
+
+void extract_urls(const std::string s){
+    
 }
