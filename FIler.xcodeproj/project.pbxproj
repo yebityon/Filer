@@ -10,7 +10,6 @@
 		29E9FCE4258B6C6A00C99492 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 29E9FCE3258B6C6A00C99492 /* main.cpp */; };
 		29E9FCED258B6C9600C99492 /* file_handler.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 29E9FCEB258B6C9600C99492 /* file_handler.cpp */; };
 		29E9FCF3258B6F9B00C99492 /* string_filter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 29E9FCF1258B6F9B00C99492 /* string_filter.cpp */; };
-		4C2709F9258C7AB600F1E5DE /* global.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4C2709F7258C7AB600F1E5DE /* global.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -32,8 +31,7 @@
 		29E9FCEC258B6C9600C99492 /* file_handler.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = file_handler.hpp; sourceTree = "<group>"; };
 		29E9FCF1258B6F9B00C99492 /* string_filter.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = string_filter.cpp; sourceTree = "<group>"; };
 		29E9FCF2258B6F9B00C99492 /* string_filter.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = string_filter.hpp; sourceTree = "<group>"; };
-		4C2709F7258C7AB600F1E5DE /* global.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = global.cpp; sourceTree = "<group>"; };
-		4C2709F8258C7AB600F1E5DE /* global.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = global.hpp; sourceTree = "<group>"; };
+		29E9FD01258C94CC00C99492 /* constant.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = constant.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,11 +65,10 @@
 			isa = PBXGroup;
 			children = (
 				29E9FCE3258B6C6A00C99492 /* main.cpp */,
-				4C2709F7258C7AB600F1E5DE /* global.cpp */,
-				4C2709F8258C7AB600F1E5DE /* global.hpp */,
-				29E9FCEB258B6C9600C99492 /* file_handler.cpp */,
+				29E9FD01258C94CC00C99492 /* constant.hpp */,
 				29E9FCF1258B6F9B00C99492 /* string_filter.cpp */,
 				29E9FCF2258B6F9B00C99492 /* string_filter.hpp */,
+				29E9FCEB258B6C9600C99492 /* file_handler.cpp */,
 				29E9FCEC258B6C9600C99492 /* file_handler.hpp */,
 			);
 			path = FIler;
@@ -133,7 +130,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4C2709F9258C7AB600F1E5DE /* global.cpp in Sources */,
 				29E9FCE4258B6C6A00C99492 /* main.cpp in Sources */,
 				29E9FCED258B6C9600C99492 /* file_handler.cpp in Sources */,
 				29E9FCF3258B6F9B00C99492 /* string_filter.cpp in Sources */,

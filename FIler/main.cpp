@@ -5,14 +5,13 @@
 //  Created by Taeyong Seong on 2020/12/17.
 
 
-#include <iostream>
-#include <string>
-#include <filesystem>
-#include <vector>
+#include "constant.hpp"
 #include "file_handler.hpp"
-#include "global.cpp"
 
-const std::vector<std::string>valid_extension_type = {".txt",".md",".dat",".csv",".cpp",".html",".yml"};
+static const std::vector<std::string>valid_extension_type = {".txt",".md",".dat",".csv",".cpp",".html",".yml"};
+std::vector<std::string>urls;
+
+
 int main(int argc, const char * argv[]) {
     if(argc != 3){
         std::cout << "USAGE : [path where you travel]" << std::endl;
@@ -29,7 +28,7 @@ int main(int argc, const char * argv[]) {
             } else {
                 std::cout << "skipped... " << i.path() << std::endl;
             }
-            
         }
     }
+    write_file(ouput_csv_filename,urls);
 }

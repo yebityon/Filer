@@ -5,9 +5,16 @@
 //  Created by Taeyong Seong on 2020/12/17.
 //
 
-#include "string_filter.hpp"
+#include "constant.hpp"
+static const std::string remove_string = "yebityon";
+static const std::string replace_string = "remutyan!";
+
+extern std::vector<std::string>urls;
+void extract_urls(const std::string s){
+    urls.emplace_back(s);
+}
 std::string filter(std::string s){
-    extracts_url(s);
+    extract_urls(s);
     std::string  ls = s;
     std::transform(ls.begin(), ls.end(), ls.begin(),[](unsigned char c){
         return std::tolower(c);
@@ -20,6 +27,4 @@ std::string filter(std::string s){
     return s;
 }
 
-void extract_urls(const std::string s){
-    
-}
+

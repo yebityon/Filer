@@ -5,14 +5,19 @@
 //  Created by Taeyong Seong on 2020/12/17.
 //
 
+#include "constant.hpp"
 #include "string_filter.hpp"
-#include "file_handler.hpp"
 
-#include <fstream>
-#include <string>
-#include <vector>
-#include <iostream>
-
+int write_file(const std::string fileName,const std::vector<std::string>&buffers){
+    std::ofstream writing_file;
+    writing_file.open(fileName);
+    std::cout << "writing... " << fileName << std::endl;
+    for(const auto& s : buffers){
+        writing_file << s << std::endl;
+    }
+    writing_file.close();
+    return 0;
+}
 
 int read_file(const std::string fileName){
     std::ifstream reading_file;
@@ -30,13 +35,3 @@ int read_file(const std::string fileName){
     return 0;
 }
 
-int write_file(const std::string fileName,const std::vector<std::string>&buffers){
-    std::ofstream writing_file;
-    writing_file.open(fileName);
-    std::cout << "writing... " << fileName << std::endl;
-    for(const auto& s : buffers){
-        writing_file << s << std::endl;
-    }
-    writing_file.close();
-    return 0;
-}
