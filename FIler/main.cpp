@@ -9,7 +9,7 @@
 #include "file_handler.hpp"
 
 std::vector<std::string>urls;
-const std::vector<std::string>valid_extension_type = {".txt",".md",".dat",".csv",".cpp",".html",".yml",".json",".html","xml","mht","xhtml","asc",".css",".xsl",".js",".pl",".bat"};
+const std::vector<std::string>valid_extension_type = {".txt",".md",".dat",".csv",".cpp",".html",".yml",".json",".html","xml","mht","xhtml","asc",".css",".xsl",".js",".pl",".bat",".ts"};
 
 int main(int argc, const char * argv[]) {
     if(argc != 3){
