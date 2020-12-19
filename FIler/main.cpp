@@ -9,7 +9,7 @@
 #include "file_handler.hpp"
 
 std::vector<std::string>urls;
-const std::vector<std::string>valid_extension_type = {".txt",".md",".dat",".csv",".cpp",".html",".yml",".json","xml","mht","xhtml","asc",".css",".xsl",".js",".pl",".bat",".ts",".scss",".conf",".xlf",".sh",".sql",".mustache",".pug"};
+const std::vector<std::string>valid_extension_type = {".txt",".md",".dat",".csv",".cpp",".html",".yml",".json","xml","mht","xhtml","asc",".css",".xsl",".js",".pl",".bat",".ts",".scss",".conf",".xlf",".sh",".sql",".mustache",".pug","",".buster"};
 
 int main(int argc, const char * argv[]) {
     if(argc != 3){
@@ -25,7 +25,7 @@ int main(int argc, const char * argv[]) {
             if(std::find(valid_extension_type.begin(), valid_extension_type.end(), extension_type) != valid_extension_type.end()){
                 read_file(i.path());
             //} else {
-                std::cout << "skipped... " << i.path() << std::endl;
+             //   std::cout << "skipped... " << i.path() << std::endl;
             //}
         }
     }

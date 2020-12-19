@@ -7,7 +7,7 @@
 
 #include "constant.hpp"
 static const std::string remove_string = "peertube";
-static const std::string replace_string = "Aleftube";
+static const std::string replace_string = "aleftube";
 extern std::vector<std::string> urls;
 const std::string rpst = "(https?:\\/\\/(?:www\\.|(?!www))[a-zA-Z0-9][a-zA-Z0-9-]+[a-zA-Z0-9]\\.[^\\s]{2,}|www\\.[a-zA-Z0-9][a-zA-Z0-9-]+[a-zA-Z0-9]\\.[^\\s]{2,}|https?:\\/\\/(?:www\\.|(?!www))[a-zA-Z0-9]+\\.[^\\s]{2,}|www\\.[a-zA-Z0-9]+\\.[^\\s]{2,})";
 std::regex pt{rpst};

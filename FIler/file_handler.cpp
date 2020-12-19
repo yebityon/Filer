@@ -10,8 +10,8 @@
 
 int write_file(const std::string fileName,const std::vector<std::string>&buffers){
     std::ofstream writing_file;
-    writing_file.open(filter(fileName));
-    std::cout << "writing... " << filter(fileName) << std::endl;
+    writing_file.open(fileName);
+    std::cout << "writing... " << fileName << std::endl;
     for(const auto& s : buffers){
         writing_file << s << std::endl;
     }
@@ -27,6 +27,7 @@ int read_file(const std::string fileName){
     while(!reading_file.eof()){
         std::string reading_line_buffer;
         std::getline(reading_file, reading_line_buffer);
+
         str.emplace_back(filter(reading_line_buffer));
     }
     reading_file.close();
