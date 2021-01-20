@@ -29,12 +29,17 @@ std::string create_replaced_string(const std::string& base){
     }
     return res;
 }
+=======
+static const std::string remove_string =  "peertube";
+static const std::string replace_string = "aleftube";
+>>>>>>> c36639d87c2a848df1141104ad02b1e78e0dd67f
 
 std::string filter(std::string s){
     std::string  ls = s;
     std::transform(ls.begin(), ls.end(), ls.begin(),[](unsigned char c){
         return std::tolower(c);
     });
+<<<<<<< HEAD
     while(ls.find(base_remove_string) != std::string::npos){
         int id = (int)ls.find(base_remove_string);
         auto substr = s.substr(id,base_remove_string.size());
@@ -50,6 +55,19 @@ void rename_folder(const fs::path origin){
         return std::tolower(c);
     });
     if(ls.find(base_remove_string) == std::string::npos) return;
+=======
+    while(ls.find(remove_string) != std::string::npos){
+        int id = (int)ls.find(remove_string);
+        ls.replace(id, remove_string.size(), replace_string);
+        s.replace(id, remove_string.size(), replace_string);
+    }
+    return s;
+}
+
+void rename_folder(const fs::path origin){
+    fs::path target = fs::path(filter(origin.string()));
+    if(origin.string().find(remove_string) == std::string::npos) return;
+>>>>>>> c36639d87c2a848df1141104ad02b1e78e0dd67f
     vec.emplace_back(origin);
     return;
 }
