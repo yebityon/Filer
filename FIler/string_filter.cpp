@@ -6,33 +6,48 @@
 //
 
 #include "constant.hpp"
-static const std::string remove_string = "peertube";
-static const std::string replace_string = "aleftube";
+
 extern std::vector<std::string> urls;
-const std::string rpst = "(https?:\\/\\/(?:www\\.|(?!www))[a-zA-Z0-9][a-zA-Z0-9-]+[a-zA-Z0-9]\\.[^\\s]{2,}|www\\.[a-zA-Z0-9][a-zA-Z0-9-]+[a-zA-Z0-9]\\.[^\\s]{2,}|https?:\\/\\/(?:www\\.|(?!www))[a-zA-Z0-9]+\\.[^\\s]{2,}|www\\.[a-zA-Z0-9]+\\.[^\\s]{2,})";
+
 std::regex pt{rpst};
 std::smatch match;
+
+std::string create_replaced_string(const std::string& base){
+    auto res = base_replace_string;
+    for(int i = 0; i < base.size(); ++i){
+        if( 'a' <= base[i] && base[i] <= 'z'){
+            
+        } else {
+            res[i] = toupper(res[i]);
+        }
+    }
+    return res;
+}
 void extract_urls(const std::string s){
     auto ts = s;
     while (std::regex_search(ts, match, pt)) {
-//        std::cout << match[0].str() << std::endl;
+    //    std::cout << match[0].str() << std::endl;
         std::string  ss(match[0].str());
-        if(ss.find(replace_string) != std::string::npos)
+        if(ss.find(base_replace_string) != std::string::npos)
             urls.emplace_back(match[0].str());
         ts = match.suffix();
     }
 }
 std::string filter(std::string s){
-    extract_urls(s);
+    
+    int offset = (int)base_replace_string.size() - (int)base_remove_string.size();
+
     std::string  ls = s;
     std::transform(ls.begin(), ls.end(), ls.begin(),[](unsigned char c){
         return std::tolower(c);
     });
-    while(ls.find(remove_string) != std::string::npos){
-        int id = (int)ls.find(remove_string);
-        ls.replace(id, remove_string.size(), replace_string);
-        s.replace(id, remove_string.size(), replace_string);
+    while(ls.find(base_remove_string) != std::string::npos){
+        int id = (int)ls.find(base_remove_string);
+        auto substr = s.substr(id,base_remove_string.size());
+        ls.replace(id, base_remove_string.size(), base_replace_string);
+        s.replace(id + offset, substr.size(), create_replaced_string(substr));
     }
+    extract_urls(ls);
     return s;
 }
 
